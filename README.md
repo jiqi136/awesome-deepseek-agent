@@ -11,6 +11,7 @@ Each guide walks through installation, configuration, and first run — so you c
 | Tool | Description | Guide |
 | --- | --- | --- |
 | **Claude Code** | AI coding assistant that runs in the terminal. | [Guide](./docs/claude_code.md) |
+| **Kilo Code** | AI coding assistant available as a CLI and editor extension. | [Guide](./docs/kilo_code.md) |
 | **OpenCode** | Open-source AI coding assistant available in terminal, web, and other forms. | [Guide](./docs/opencode.md) |
 | **OpenClaw** | Open-source personal AI assistant that plugs into chat tools (Feishu, WeChat) and is extensible via Skills. | [Guide](./docs/openclaw.md) |
 
