@@ -4,7 +4,7 @@
 
 Deep Code 是一款开源的终端 AI 编程助手，专为 DeepSeek-V4 系列模型适配，支持深度思考、推理强度控制以及 Agent Skills。
 
-- **GitHub：** <https://github.com/qorzj/deepcode-cli>
+- **GitHub：** <https://github.com/lessweb/deepcode-cli>
 
 #### 1. 安装 Deep Code
 
@@ -39,7 +39,7 @@ deepcode --version
 
 从 [DeepSeek 开放平台](https://platform.deepseek.com/api_keys) 获取你的 API Key。
 
-> **注意：** 此配置文件与 [Deep Code VSCode 扩展](https://github.com/qorzj/deepcode) 共享。
+> **注意：** 此配置文件与 [Deep Code VSCode 扩展](https://github.com/lessweb/deepcode) 共享。
 
 **配置选项：**
 
