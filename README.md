@@ -12,6 +12,7 @@ Each guide walks through installation, configuration, and first run — so you c
 | --- | --- | --- |
 | **Claude Code** | AI coding assistant that runs in the terminal. | [Guide](./docs/claude_code.md) |
 | **OpenCode** | Open-source AI coding assistant available in terminal, web, and other forms. | [Guide](./docs/opencode.md) |
+| **Deep Code** | Open-source terminal AI coding assistant for the DeepSeek-V4 model with deep thinking, reasoning effort control, and Agent Skills. | [Guide](./docs/deepcode.md) |
 | **OpenClaw** | Open-source personal AI assistant that plugs into chat tools (Feishu, WeChat) and is extensible via Skills. | [Guide](./docs/openclaw.md) |
 
 ## Resources
