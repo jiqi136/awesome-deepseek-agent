@@ -1,6 +1,6 @@
-# Configure DeepSeek in Droid
+# Configure DeepSeek in Factory AI Droid
 
-This guide explains how to add DeepSeek models to Droid's `settings.json`.
+This guide explains how to add DeepSeek models to Factory AI Droid's `settings.json`.
 
 ## Available Models
 
@@ -110,20 +110,24 @@ DeepSeek V4 Pro and V4 Flash support both `anthropic` and `openai` provider type
 ## Troubleshooting
 
 **Model not appearing in selector**
+
 - Check JSON syntax in `~/.factory/settings.json` (or `config.json` if using legacy format)
 - Settings changes are detected automatically via file watching
 - Verify all required fields are present
 
 **"Invalid provider" error**
+
 - Provider must be exactly `anthropic`, `openai`, or `generic-chat-completion-api`
 - Check for typos and ensure proper capitalization
 
 **Authentication errors**
+
 - Verify your API key is valid and has available credits
 - Check that the API key has proper permissions
 - Confirm the base URL matches your provider's documentation
 
 **Rate limiting or quota errors**
+
 - Check your provider's rate limits and usage quotas
 - Monitor your usage through your provider's dashboard
 
