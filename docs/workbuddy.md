@@ -24,7 +24,13 @@ To apply the configuration only to one project, create the project-level configu
 <your-project>\.codebuddy\models.json
 ```
 
-Add the following configuration and replace `<your DeepSeek API Key>` with your real API Key:
+Set your DeepSeek API Key as an environment variable first:
+
+```powershell
+setx DEEPSEEK_API_KEY "<your DeepSeek API Key>"
+```
+
+Then add the following configuration:
 
 ```json
 {
@@ -34,7 +40,7 @@ Add the following configuration and replace `<your DeepSeek API Key>` with your 
       "name": "DeepSeek V4 Pro",
       "vendor": "DeepSeek",
       "url": "https://api.deepseek.com/v1/chat/completions",
-      "apiKey": "<your DeepSeek API Key>",
+      "apiKey": "${DEEPSEEK_API_KEY}",
       "maxInputTokens": 128000,
       "maxOutputTokens": 8192,
       "supportsToolCall": true,
@@ -49,7 +55,7 @@ Add the following configuration and replace `<your DeepSeek API Key>` with your 
       "name": "DeepSeek V4 Flash",
       "vendor": "DeepSeek",
       "url": "https://api.deepseek.com/v1/chat/completions",
-      "apiKey": "<your DeepSeek API Key>",
+      "apiKey": "${DEEPSEEK_API_KEY}",
       "maxInputTokens": 128000,
       "maxOutputTokens": 8192,
       "supportsToolCall": true,
@@ -97,4 +103,4 @@ If the request succeeds, the API Key and model name are valid.
 - `Model Not Found` or `404`: Check whether the model id is exactly `deepseek-v4-pro` or `deepseek-v4-flash`.
 - `Failed to read local model configuration`: Check whether `models.json` is valid JSON and saved as UTF-8 without BOM.
 - The model does not appear in the selector: Fully restart WorkBuddy/CodeBuddy and confirm the file is placed under `.codebuddy\models.json`.
-- `${DEEPSEEK_API_KEY}` is shown literally in the UI: The desktop UI may not expand environment variables in `models.json`; write the actual API Key into the local configuration file.
+- `${DEEPSEEK_API_KEY}` is shown literally in the UI: Restart WorkBuddy/CodeBuddy from a terminal where `DEEPSEEK_API_KEY` is available. If the desktop UI still does not expand environment variables, paste the actual API Key in the UI or in your local `models.json`.

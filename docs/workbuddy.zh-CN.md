@@ -24,7 +24,13 @@ C:\Users\<你的用户名>\.codebuddy\models.json
 <你的项目>\.codebuddy\models.json
 ```
 
-写入以下配置，并将 `<your DeepSeek API Key>` 替换成你的真实 API Key：
+先将 DeepSeek API Key 设置为环境变量：
+
+```powershell
+setx DEEPSEEK_API_KEY "<your DeepSeek API Key>"
+```
+
+然后写入以下配置：
 
 ```json
 {
@@ -34,7 +40,7 @@ C:\Users\<你的用户名>\.codebuddy\models.json
       "name": "DeepSeek V4 Pro",
       "vendor": "DeepSeek",
       "url": "https://api.deepseek.com/v1/chat/completions",
-      "apiKey": "<your DeepSeek API Key>",
+      "apiKey": "${DEEPSEEK_API_KEY}",
       "maxInputTokens": 128000,
       "maxOutputTokens": 8192,
       "supportsToolCall": true,
@@ -49,7 +55,7 @@ C:\Users\<你的用户名>\.codebuddy\models.json
       "name": "DeepSeek V4 Flash",
       "vendor": "DeepSeek",
       "url": "https://api.deepseek.com/v1/chat/completions",
-      "apiKey": "<your DeepSeek API Key>",
+      "apiKey": "${DEEPSEEK_API_KEY}",
       "maxInputTokens": 128000,
       "maxOutputTokens": 8192,
       "supportsToolCall": true,
@@ -97,4 +103,4 @@ curl https://api.deepseek.com/v1/chat/completions `
 - `未找到模型` 或 `404`：检查模型 id 是否严格写成 `deepseek-v4-pro` 或 `deepseek-v4-flash`。
 - `读取本地模型配置失败`：检查 `models.json` 是否是合法 JSON，并保存为 UTF-8 无 BOM。
 - 模型选择器中不显示：完全重启 WorkBuddy/CodeBuddy，并确认文件放在 `.codebuddy\models.json`。
-- UI 中直接显示 `${DEEPSEEK_API_KEY}`：桌面端可能不会展开 `models.json` 中的环境变量，请在本地配置文件中写入真实 API Key。
+- UI 中直接显示 `${DEEPSEEK_API_KEY}`：请从已设置 `DEEPSEEK_API_KEY` 的终端中重启 WorkBuddy/CodeBuddy。如果桌面端仍不展开环境变量，可以在 UI 或本地 `models.json` 中填入真实 API Key。
